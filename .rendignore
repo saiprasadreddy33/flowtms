@@ -1,0 +1,12 @@
+frontend
+shared
+.git
+.gitignore
+README.md
+DEPLOYMENT.md
+.vercelignore
+vercel.json
+node_modules
+.env
+.env.local
+dist

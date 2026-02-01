@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: flowtms-backend
+    env: node
+    plan: free
+    branch: master
+    buildCommand: cd backend && npm install && npm run build
+    startCommand: cd backend && npm start
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        scope: build
+      - key: JWT_EXPIRATION
+        value: 24h
