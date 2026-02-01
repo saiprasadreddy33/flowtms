@@ -1,0 +1,9 @@
+backend
+shared
+.git
+.gitignore
+README.md
+DEPLOYMENT.md
+node_modules
+.env
+.env.local
