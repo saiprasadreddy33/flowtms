@@ -1,0 +1,38 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+.layout__main {
+  flex: 1;
+  transition: margin-left 0.3s ease;
+  padding: 2rem 2.5rem 3rem;
+  animation: pageFade 0.45s ease;
+}
+
+.layout__main--with-sidebar {
+  margin-left: 280px;
+}
+
+@media (max-width: 768px) {
+  .layout__main--with-sidebar {
+    margin-left: 0;
+  }
+
+  .layout__main {
+    padding: 1.5rem;
+  }
+}
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

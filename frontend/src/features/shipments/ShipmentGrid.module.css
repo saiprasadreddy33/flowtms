@@ -1,0 +1,132 @@
+.grid {
+  overflow-x: auto;
+}
+
+.grid__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.grid__header {
+  background: var(--surface-soft);
+  border-bottom: 2px solid var(--stroke);
+}
+
+.grid__headerCell {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s;
+}
+
+.grid__headerCell:hover {
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--primary);
+}
+
+.grid__headerCell--active {
+  color: var(--primary);
+  background: rgba(37, 99, 235, 0.1);
+}
+
+.grid__headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.grid__sortIcons {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-left: 0.25rem;
+  line-height: 1;
+}
+
+.grid__sortIcon {
+  display: block;
+  font-size: 0.7rem;
+  color: #94a3b8;
+  line-height: 0.6;
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.grid__headerCell:hover .grid__sortIcon {
+  opacity: 1;
+  color: #64748b;
+}
+
+.grid__sortIcon--active {
+  color: var(--primary);
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.grid__sortIcon--inactive {
+  opacity: 0.3;
+}
+
+.grid__body {
+}
+
+.grid__row {
+  border-bottom: 1px solid var(--stroke);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.grid__row:hover {
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.grid__cell {
+  padding: 1rem;
+  color: var(--text);
+  font-size: 0.875rem;
+}
+
+.grid__status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.grid__status--pending {
+  background: #fef5e7;
+  color: #d68910;
+}
+
+.grid__status--in-transit {
+  background: #ebf8ff;
+  color: #2b6cb0;
+}
+
+.grid__status--delivered {
+  background: #f0fff4;
+  color: #38a169;
+}
+
+.grid__status--cancelled {
+  background: #fed7d7;
+  color: #c53030;
+}
+
+.grid__empty {
+  padding: 3rem;
+  text-align: center;
+  color: #a0aec0;
+  font-size: 1.125rem;
+}
